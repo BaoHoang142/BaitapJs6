@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const todoList = ["Go to bed at 11pm", "Do homework at 8pm"];
+        const text = ['c', 'r', 'u', 'd'];
+        const local = ['top', `mid`, `bot`];
+        const fdelete = ['top', `mid`, `all`];
+        let str = prompt("Mời bố nhập");
+        id = text.indexOf(str);
+        if (id == 0) {
+            let newAdd = prompt("Mời bạn nhập nội dung mới");
+            todoList.push(newAdd);
+            for (let i = 0; i < todoList.length; i++) {
+                console.log(`${i} ${todoList[i]}\n`);
+
+            }
+        } else if (id == 1) {
+            for (let i = 0; i < todoList.length; i++) {
+                console.log(`${i} ${todoList[i]}\n`);
+            }
+        } else if (id == 2) {
+            let localChoose = prompt("Mày muốn thêm vào vị trí nào (top-mid-bot) ?");
+            k = local.indexOf(localChoose);
+            if (k == 0) {
+                let updateNews = prompt("Nội dung mày thêm là gì?");
+                todoList.splice(0, 0, updateNews);
+                for (let i = 0; i < todoList.length; i++) {
+                    console.log(`${i} ${todoList[i]}\n`);
+                }
+            } else if (k == 1) {
+                let updateNews = prompt("Nội dung mày thêm là gì?");
+                todoList.splice(1, 0, updateNews);
+                for (let i = 0; i < todoList.length; i++) {
+                    console.log(`${i} ${todoList[i]}\n`);
+                }
+            } else if (k == 2) {
+                let updateNews = prompt("Nội dung mày thêm là gì?");
+                todoList.splice(2, 0, updateNews);
+                for (let i = 0; i < todoList.length; i++) {
+                    console.log(`${i} ${todoList[i]}\n`);
+                }
+            }
+        } else if (id == 3) {
+            let localDelete = prompt("Mày muốn xóa vị trí nào (top-mid-all) ?");
+            l = fdelete.indexOf(localDelete);
+            if (l == 0) {
+                todoList.splice(0, 1);
+                for (let i = 0; i < todoList.length; i++) {
+                    console.log(`${i} ${todoList[i]}\n`);
+                }
+            } else if (l == 1) {
+                todoList.splice(1, 2);
+                for (let i = 0; i < todoList.length; i++) {
+                    console.log(`${i} ${todoList[i]}\n`);
+                }
+            } else if (l == 2) {
+                todoList.splice(0);
+                for (let i = 0; i < todoList.length; i++) {
+                    console.log(`${i} ${todoList[i]}\n`);
+                }
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

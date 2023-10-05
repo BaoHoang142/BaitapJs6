@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" id="tieng_anh">
+    
+    <input type="button" value="Dịch" onclick="dich()">
+    <br><br>
+    <p id="tieng_viet"> -->
+    <script>
+            let tieng_anh = prompt("Nhập vào từ tiếng anh cần dịch")
+            let tuTA = ["how", "old", "are", "you", "i", "am", "fine", "thanks"];
+            let tuTV = ["làm sao", "cũ, cổ xưa", "là", "bạn", "tôi", "là", "khỏe", "cảm ơn"];
+            // document.write("Chỉ có thể dịch được các từ [" + tuTA.join(" ") + "]");
+            let id = tuTA.indexOf(tieng_anh);
+            if (id != -1) {
+                alert(tuTV[id])
+            } else {
+                alert("không có dữ liệu")
+            }
+        
+                
+    </script>
+</body>
+</html>
